@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+import re
+
+def normalize_NC(newNameAlt):
+      # print('passed in facility name: ', newNameAlt)
+      #NC 
+      newNameAlt = re.sub('ACCORDIUS HEALTH$', 'ACCORDIUS HEALTH AT GREENSBORO', newNameAlt)
+      newNameAlt = re.sub('ACCORDIUS HEALTH - GASTONIA', 'ACCORDIUS HEALTH AT GASTONIA', newNameAlt)
+      newNameAlt = re.sub('ACCORDIUS HEALTH OF CLEMMONS', 'ACCORDIUS HEALTH AT CLEMMONS', newNameAlt)
+      newNameAlt = re.sub('ACCORDIUS HEALTH OF SALISBURY', 'ACCORDIUS HEALTH AT SALISBURY', newNameAlt)
+      newNameAlt = re.sub('ASBURY HEALTH AND REHABILITATION', 'ASBURY HEALTH AND REHABILITATION CENTER', newNameAlt)
+      newNameAlt = re.sub('CAROLINA REHABILITATION CENTER', 'CAROLINA REHABILITATION CENTER OF CUMBERLAND', newNameAlt)
+      newNameAlt = re.sub('CAROLINA REHABILITATION OF BURKE', 'CAROLINA REHABILITATION CENTER OF BURKE', newNameAlt)
+      newNameAlt = re.sub('FAIR HAVEN HOME- BOSTIC', 'FAIR HAVEN HOME', newNameAlt)
+      newNameAlt = re.sub('KENANSVILLE HEALTH AND REHABILITATION', 'KENANSVILLE HEALTH AND REHABILITATION CENTER', newNameAlt)
+      newNameAlt = re.sub('LIBERTY COMMONS NURSING AND REHABILITATION$', 'LIBERTY COMMONS NURSING AND REHABILITATION CENTER OF ROWAN COUNTY', newNameAlt)
+      newNameAlt = re.sub('LIBERTY COMMONS NURSING AND REHABILITATION CENTER OF JOHNSTON CTY', 'LIBERTY COMMONS NURSING AND REHABILITATION CENTER OF JOHNSTON COUNTY', newNameAlt)
+      newNameAlt = re.sub('NC STATE VETERANS HOME$', 'NC STATE VETERANS HOME-KINSTON', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES ALAMANCE', 'PEAK RESOURCES - ALAMANCE', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES CHERRYVILLE', 'PEAK RESOURCES - CHERRYVILLE', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES LTCF', 'PEAK RESOURCES - OUTER BANKS', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES PINE LAKE CARTHAGE', 'PEAK RESOURCES - PINELAKE', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES SHELBY', 'PEAK RESOURCES - SHELBY', newNameAlt)
+      newNameAlt = re.sub('PEAK RESOURCES-OUTER BANKS', 'PEAK RESOURCES - OUTER BANKS', newNameAlt)
+      newNameAlt = re.sub('PELICAN HEALTH', 'PELICAN HEALTH THOMASVILLE', newNameAlt)
+      newNameAlt = re.sub('PRUITT HEALTH DURHAM', 'PRUITT HEALTH - DURHAM', newNameAlt)
+      newNameAlt = re.sub('PRUITTHEALTH FARMVILLE', 'PRUITT HEALTH - FARMVILLE', newNameAlt)
+      newNameAlt = re.sub('PRUITTHEALTH-ROCKINGHAM', 'PRUITT HEALTH - ROCKINGHAM', newNameAlt)
+      newNameAlt = re.sub('SIGNATURE HEALTHCARE$', 'SIGNATURE HEALTHCARE OF CHAPEL HILL', newNameAlt)
+      newNameAlt = re.sub('SIGNATURE HEALTHCARE KINSTON', 'SIGNATURE HEALTHCARE OF KINSTON', newNameAlt)
+      newNameAlt = re.sub('UNIVERSAL HEALTH CARE/GREENVILLE', 'UNIVERSAL HEALTH CARE / GREENVILLE', newNameAlt)
+      newNameAlt = re.sub('UNIVERSAL HEALTH CARE/OXFORD', 'UNIVERSAL HEALTH CARE / OXFORD', newNameAlt)
+      newNameAlt = re.sub('UNIVERSAL HEALTHCARE$', 'UNIVERSAL HEALTH CARE / LILLINGTON', newNameAlt)
+      newNameAlt = re.sub('UNIVERSAL HEALTHCARE RAMSEUR', 'UNIVERSAL HEALTH CARE / RAMSEUR', newNameAlt)
+      newNameAlt = re.sub('VA COMMUNITY LIVING CENTER, FAYETTEVILLE', 'NC STATE VETERANS HOME - FAYETTEVILLE', newNameAlt)
+      newNameAlt = re.sub('WHISPERING PINES', 'WHISPERING PINES NURSING AND REHABILITATION CENTER', newNameAlt)
+      newNameAlt = re.sub('WHITE OAK MANOR WAXHAW', 'WHITE OAK MANOR - WAXHAW', newNameAlt)
+      newNameAlt = re.sub('WHITE OAK MANOR-KINGS MOUNTAIN', 'WHITE OAK MANOR - KINGS MOUNTAIN', newNameAlt)
+      newNameAlt = re.sub('WHITE OAK MANOR$', 'WHITE OAK MANOR - BURLINGTON', newNameAlt)
+
+
+      # print('moduled normalized new name alt: ', newNameAlt)
+
+      return newNameAlt

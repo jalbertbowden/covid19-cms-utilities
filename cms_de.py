@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+import re
+
+def normalize_cms_DE(newName):
+      # print('passed in facility name: ', newName)
+      
+      # DE
+      newName = re.sub('CADIA REHABILITATION BROADMEADOW', 'CADIA HEALTHCARE BROADMEADOW', newName)
+      newName = re.sub('CADIA REHABILITATION CAPITOL', 'CADIA HEALTHCARE CAPITOL', newName)
+      newName = re.sub('CADIA REHABILITATION PIKE CREEK', '', newName)
+      newName = re.sub('CADIA REHABILITATION RENAISSANCE', 'CADIA HEALTHCARE RENAISSANCE', newName)
+      newName = re.sub('CADIA REHABILITATION SILVERSIDE', 'CADIA HEALTHCARE NORTH WILMINGTON/SILVERSIDE', newName)
+      newName = re.sub('DELAWARE HOSPITAL F/T CHRONICALLY ILL \(DHCI\)', 'DELAWARE HOSPITAL FOR THE CHRONICALLY ILL', newName)
+      newName = re.sub('HARBOR HEALTHCARE AND REHABILITATION CENTER', 'HARBOR HEALTHCARE AND REHABILITATION', newName)
+      newName = re.sub('HARRISON SENIOR LIVING OF GEORGETOWN', 'HARRISON HOUSE SENIOR LIVING', newName)
+      newName = re.sub('KUTZ REHABILITATION AND NURSING', 'KUTZ SENIOR LIVING', newName)
+      newName = re.sub('NEW CASTLE HEALTH AND REHABILITATION CENTER', 'NEW CASTLE LONG TERM CARE', newName)
+      newName = re.sub('PARKVIEW NURSING', 'PARKVIEW NURSING AND REHABILITATION', newName)
+      newName = re.sub('WESTMINSTER VILLAGE HEALTH', 'WESTMINSTER VILLAGE', newName)
+
+
+      return newName

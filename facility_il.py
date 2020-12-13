@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+import re
+
+def normalize_IL(newNameAlt):
+      # print('passed in facility name: ', newNameAlt)
+      # IL
+      # TAYLORVILLE SKILLED NURSING (FKA MEADOW MANOR)
+      newNameAlt = re.sub('ALDEN POPLARCREEK', 'ALDEN POPLAR CREEK', newNameAlt)
+      newNameAlt = re.sub('ALDEN TOWN MANOR REHABILITATION AND HEALTH CARE CENT', 'ALDEN TOWN MANOR REHABILITATION AND HEALTH CARE CENTER', newNameAlt)
+      newNameAlt = re.sub('APERION CARE- PRINCETON', 'APERION CARE PRINCETON', newNameAlt)
+      newNameAlt = re.sub('APERION CARE-BLOOMINGTON', 'APERION CARE BLOOMINGTON', newNameAlt)
+      newNameAlt = re.sub('AVANTARA OF ELGIN','AVANTARA ELGIN', newNameAlt)
+      newNameAlt = re.sub('BRIA FOREST EDGE', 'BRIA OF FOREST EDGE', newNameAlt)
+      newNameAlt = re.sub('BRIA RIVER OAKS', 'BRIA OF RIVER OAKS', newNameAlt)
+      newNameAlt = re.sub('BURBANK REHABILITATION - VERA CARE STICKNEY', 'BURBANK REHABILITATION CENTER', newNameAlt)
+      newNameAlt = re.sub('CALIFORNIA GARDENS NURSING AND REHABILITATION CENT', 'CALIFORNIA GARDENS NURSING AND REHABILITATION CENTER', newNameAlt)
+      newNameAlt = re.sub('CHAMPAIGN-URBANA NURSING AND REHABILITATION', 'CHAMPAIGN URBANA NURSING AND REHABILITATION', newNameAlt)
+      newNameAlt = re.sub('CITADEL CARE CENTER OF KANKAKEE', 'CITADEL OF KANKAKEE', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH EL PASO', 'HERITAGE HEALTH - EL PASO', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH JACKSONVILLE', 'HERITAGE HEALTH - JACKSONVILLE', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH MENDOTA', 'HERITAGE HEALTH - MENDOTA', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH OF NORMAL', 'HERITAGE HEALTH - NORMAL', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH OF PANA', 'HERITAGE HEALTH - PANA', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH PERU', 'HERITAGE HEALTH - PERU', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH SPRINGFIELD', 'HERITAGE HEALTH - SPRINGFIELD', newNameAlt)
+      newNameAlt = re.sub('HERITAGE HEALTH: THERAPY AND SENIOR CARE - SPRINGFIE', 'HERITAGE HEALTH: THERAPY AND SENIOR CARE - SPRINGFIELD', newNameAlt)
+      newNameAlt = re.sub('LAKE COOK REHABILITATION AND HEALTHCARE(FORMERLY ROSEWOOD)', 'LAKE COOK REHABILITATION AND HEALTHCARE', newNameAlt)
+      newNameAlt = re.sub('LITTLE SISTERS OF THE POOR ST MARYS HOME', 'LITTLE SISTERS OF THE POOR/ST. MARYS HOME', newNameAlt)
+      newNameAlt = re.sub('PRARIEVIEW AT THE GARLANDS', 'PRAIRIEVIEW AT THE GARLANDS', newNameAlt)
+      newNameAlt = re.sub('TAYLORVILLE SKILLED NURSING \(FKA MEADOW MANOR\)', 'TAYLORVILLE SKILLED NURSING AND REHABILITATION', newNameAlt)
+      newNameAlt = re.sub('PACTT LEARNING -OAK PARK', 'PACTT LEARNING - OAK PARK', newNameAlt)
+      newNameAlt = re.sub('PA PETERSON AT THECITADEL', 'PA PETERSON AT THE CITADEL', newNameAlt)
+      newNameAlt = re.sub('UNIVERSITY REHABILITATION AT NORTHMOOR', 'UNIVERSITY REHABILITATION CENTER AT NORTHMOOR', newNameAlt)
+
+      # print('moduled normalized new name alt: ', newNameAlt)
+
+      return newNameAlt

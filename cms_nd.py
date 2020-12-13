@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+import re
+
+def normalize_cms_ND(newName):
+      # print('state to be normalized: ', state)
+      print('passed in facility name: ', newName)
+      # ND
+      # SOUTHWEST HEALTHCARE SERVS -> SOUTHWEST HEALTHCARE SERVICE
+      # GARRISON MEM HOSPITAL NURSING FAC -> GARRISON MEM HOSPITAL NURSING FACILITY
+      # NORTHWOOD DEACONESS HEALTH CNT -> NORTHWOOD DEACONESS HEALTH CENTER
+      newName = re.sub('AUGUSTA PLACE, A PROSPERA COMMUNITY', 'AUGUSTA PLACE', newName)
+      # newName = re.sub('EVENTIDE HEARTLAND', 'EVENTIDE HEARTLAND COURTS', newName)
+      newName = re.sub('EVENTIDE LAKE COUNTY MANOR', 'EVENTIDE DOWNTOWN', newName)
+      newName = re.sub('EVENTIDE JAMESTOWN', 'EVENTIDE JAMESTOWN ASSISTED LIVING', newName)
+      # newName = re.sub('EVENTIDE FARGO', 'EVENTIDE SENIOR LIVING ASSISTED LIVING', newName)
+
+      newName = re.sub('EVENTIDE HEARTLAND', 'EVENTIDE HEARTLAND LTC', newName)
+      newName = re.sub('EVENTIDE AT SHEYENNE CROSSINGS', 'EVENTIDE SHEYENNE CROSSINGS ASSISTED LIVING', newName)
+      # newName = re.sub('FOUR SEASONS HEALTH CARE', 'FOUR SEASONS VILLA', newName)
+      newName = re.sub('GOLDEN ACRES MANOR', 'GOLDEN ACRES ESTATE', newName)
+      newName = re.sub('LUTHERAN HOME OF THE GOOD SHEPHERD', 'LUTHERAN HOME GOOD SHEPHERD', newName)
+      newName = re.sub('WESTERN HORIZONS CARE CENTER', 'WESTERN HORIZONS CARE', newName)
+      newName = re.sub('WISHEK LIVING CENTER', 'WISHEK SENIOR LIVING CENTER', newName)
+      newName = re.sub('DAKOTA ALPHA', 'DAKOTA POINTE', newName)
+      newName = re.sub('EVENTIDE DEVILS LAKE CARE CENTER', 'EVENTIDE LAKE COUNTY MANOR', newName)
+      newName = re.sub('ASHLEY MEDICAL CENTER NURSING HOME', 'ASHLEY MEDICAL CENTER', newName)
+      newName = re.sub('BENEDICTINE LIVING CENTER OF GARRISON', 'BENEDICTINE LIVING CENTER', newName)
+      newName = re.sub('BETHEL LUTHERAN NURSING AND REHABILITATION CENTER', 'BETHEL LUTHERAN NURSING HOME', newName)
+      newName = re.sub('DUNSEITH COM NURSING HOME', 'DUNSEITH COMMUNITY NURSING HOME', newName)
+      newName = re.sub('HILL TOP HOME OF COMFORT', 'HILLTOP HOME', newName)
+      newName = re.sub('LUTHERAN HOME GOOD SHEPHERD', 'LUTHERAN HOME OF GOOD SHEPHERD', newName)
+      newName = re.sub('LUTHERAN SUNSET HOME', 'LUTHERAN SUNSET HOMES', newName)
+      newName = re.sub('MARIAN MANOR HEALTHCARE CENTER', 'MARIAN MANOR', newName)
+      newName = re.sub('MARYHILL MANOR', 'MARY HILL MANOR', newName)
+      newName = re.sub('MCKENZIE COUNTY HEALTHCARE SYSTEMS LONG TERM CARE', 'MCKENZIE COUNTY - GOOD SHEPHERD LONG TERM CARE', newName)
+      newName = re.sub('MILLER POINTE, A PROSPERA COMMUNITY', 'MILLER POINTE', newName)
+      newName = re.sub('MINOT HEALTH AND REHABILITATION', 'MINOT HEALTH AND REHABILITATION', newName)
+      newName = re.sub('NELSON COUNTY HEALTH SYSTEM CARE CENTER', 'NELSON COUNTY HEALTH SYSTEM', newName)
+      newName = re.sub('NORTH DAKOTA VETERANS HOME', 'NORTH DAKOTA VETERAN\'S HOME', newName)
+      newName = re.sub('NORTHWOOD DEACONESS HEALTH CNT', 'NORTHWOOD DEACONESS HEALTH CENTER', newName)
+      newName = re.sub('PEMBILIER NURSING CENTER', 'PEMBILIER NURSING HOME', newName)
+      newName = re.sub('PRINCE OF PEACE CARE CENTER', 'PRINCE OF PEACE', newName)
+      # newName = re.sub('RICHARDTON HEALTH CENTER', 'RICHARDTON HEALTH CARE', newName)
+      newName = re.sub('SOUTHWEST HEALTHCARE SERVS', 'SOUTH WEST HEALTH CARE CENTER', newName)
+      newName = re.sub('ST ALOISIUS MEDICAL CENTER NURSING HOME', 'ST. ALOISIUS LONG TERM CARE', newName)
+      newName = re.sub('ST BENEDICTS HEALTH CENTER', 'ST BENEDICT\'S HEALTH CARE CENTER', newName)
+      newName = re.sub('ST GABRIEL\'S COMMUNITY', 'ST. GABRIEL\'S COMMUNITY', newName)
+      # newName = re.sub('ST GERARD\'S COMMUNITY OF CARE', 'ST. GERARD\'S COMMUNITY OF CARE', newName)
+      newName = re.sub('ST LUKES HOME', 'ST. LUKE\'S HOME', newName)
+      newName = re.sub('ST LUKES SUNRISE CARE CENTER', 'ST. LUKE SUNRISE CARE CENTER', newName)
+      # newName = re.sub('ST ROSE CARE CENTER', 'ST. ROSE CARE CENTER', newName)
+      newName = re.sub('ST VINCENT\'S - A PROSPERA COMMUNITY', 'ST. VINCENT\'S CARE CENTER', newName)
+      newName = re.sub('STRASBURG NURSING HOME', 'STRASBURG CARE CENTER', newName)
+      newName = re.sub('SUNSET DRIVE - A PROSPERA COMMUNITY', 'SUNSET DRIVE PROSPERA MANDAN', newName)
+      newName = re.sub('TIOGA MEDICAL CENTER LTC', 'TIOGA MEDICAL CENTER LTC', newName)
+      newName = re.sub('WOODSIDE VILLAGE', 'WOODSIDE VILLAGE VALLEY SENIOR LIVING', newName)
+      
+      return newName
