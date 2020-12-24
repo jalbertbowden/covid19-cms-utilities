@@ -9,7 +9,7 @@ nursing_home_dataset_csv_url = 'https://data.cms.gov/api/views/s2uc-8wxp/rows.cs
 nursing_home_dataset_csv_file = 'COVID-19_Nursing_Home_Dataset.csv'
 
 file_base = 'covid-19-nursing-home-dataset-week-ending-'
-file_date = '2020-11-29'
+file_date = '2020-12-13'
 file_format = '.csv'
 file_name = file_date + '/' + file_base + file_date + file_format
 
@@ -133,14 +133,14 @@ def make_cms_state_date_csvs(file_name, states_array):
 		print('cms state data split by date complete!')
 
 # make directory for latest dataset's date
-make_date_directory(directory_current, file_date)
+# make_date_directory(directory_current, file_date)
 # get local cms data file name/path
-nursing_home_dataset_csv_file_local = get_local_file_name(file_date, nursing_home_dataset_csv_file)
+# nursing_home_dataset_csv_file_local = get_local_file_name(file_date, nursing_home_dataset_csv_file)
 # download latest cms.gov dataset csv
-get_latest_cms_data(nursing_home_dataset_csv_url, nursing_home_dataset_csv_file, nursing_home_dataset_csv_file_local)
+# et_latest_cms_data(nursing_home_dataset_csv_url, nursing_home_dataset_csv_file, nursing_home_dataset_csv_file_local)
 # make clone of cms data
-make_cms_data_clone(file_date, nursing_home_dataset_csv_file, file_name)
+# make_cms_data_clone(file_date, nursing_home_dataset_csv_file, file_name)
 # chop cms csv into individual state csvs
-make_cms_state_csvs(file_name)
+# make_cms_state_csvs(file_name)
 # chop cms state csvs into individual state by date csvs
 make_cms_state_date_csvs(file_name, states_array)
